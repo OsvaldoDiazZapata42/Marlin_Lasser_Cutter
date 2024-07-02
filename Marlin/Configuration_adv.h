@@ -3470,6 +3470,9 @@
 //TODO OSVALDO
 //#define SPINDLE_FEATURE
 #define LASER_FEATURE
+//#define SPINDLE_LASER_PWM_PIN     9
+//#define SPINDLE_LASER_ENA_PIN     4
+
 #if EITHER(SPINDLE_FEATURE, LASER_FEATURE)
   #define SPINDLE_LASER_ACTIVE_STATE    LOW    // Set to "HIGH" if SPINDLE_LASER_ENA_PIN is active HIGH
 
@@ -3488,7 +3491,7 @@
     //#define AIR_EVACUATION_PIN        42     // Override the default Cutter Vacuum or Laser Blower pin
   #endif
 //TODO OSVALDO
-  #define AIR_ASSIST                         // Air Assist control with G-codes M8-M9
+//  #define AIR_ASSIST                         // Air Assist control with G-codes M8-M9
   #if ENABLED(AIR_ASSIST)
     #define AIR_ASSIST_ACTIVE           LOW    // Active state on air assist pin
     #define AIR_ASSIST_PIN            44     // Override the default Air Assist pin
